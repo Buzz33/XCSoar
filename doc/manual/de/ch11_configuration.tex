@@ -30,7 +30,7 @@ Link: \url{http://www.xcsoar.org/trac/wiki}
 
 %%%%%%%%%%%%%%%%%%
 \section{Ändern der Voreinstellungen}
-Es gibt einen Menge an Einstellungen, welche vom Benutzer verändert werden
+Es gibt eine Menge an Einstellungen, welche vom Benutzer verändert werden
 können. Bis auf das generelle Layout des Programmes kann
 \menulabel{\bmenut{Konfig.}{2/3}\blink\bmenut{System}{Einstellung}} sogut wie alles verändert und
 an eigene Vorlieben angepasst werden.
@@ -67,7 +67,7 @@ Im Kap.~\ref{cha:data-files} werden die diversen Formate dieser Files mit ihren
 Auswirkungen auf das System besprochen.
 
 Um die Suche bzw. Auswahl und Übersicht einfacher zu machen, bleibt,
-wenn kein File benutzt bzw. angelegt werden muß, bleibt das Auswahlfeld einfach leer.
+wenn kein File benutzt bzw. angelegt werden muß, das Auswahlfeld einfach leer.
 
 Das Hauptkonfigurationsfenster (System-Einstellung) kann im ''Basis'' oder
 ''Experten''-Modus durch Anklicken eines Häkchen ''Experte'' bearbeitet werden.
@@ -92,26 +92,26 @@ Steht ein pfad dort, und sind keine Dateien vorhanden, bleiben alle weiteren Fel
 Alle Daten sollten in einem Unterordner\verb "\XCSoarData" enthalten sein.
 Es ist extrem wichtig, und als allererstes durchzuführen!
 
-Der Pfad kann sich auf der Festplatte, der SD-Karte oder im ''normale'' Speicher
+Der Pfad kann sich auf der Festplatte, der SD-Karte oder im ''normalen'' Speicher
 Deines Gerätes befinden.
 \item[\textit{Kartenddatenbank}]  Name des Kartenfiles (\verb"*.xcm") In diesem File sind alle Daten zur
 Karte, Topologie, das Höhenmodell  und die wichtigsten Daten der Wegpunkte enthalten.
 Das File ist intern als ein \verb''*.zip'' File aufgebaut.
-\item[\textit{Wegpunkte}]  Das primäre Wegpunkt-File. Wenn kein File ausgewählt wird,
-werden die Wegpunktdaten aus der Kartendatenbank (\verb"*.xcm"), s.o.\ benutzt
-(sofern dort vorhanden).
-\item[\textit{Weitere Wegpunkte$^{\textcolor{blue}{\star}}$}]  Sekundäre Wegpunktdatei. Hier können z.B. Wegpunkte und spezielle
-Angaben für Wettbewerbe hinterlegt werden.
-\item[\textit{Beobachtete Wegpunkte$^{\textcolor{blue}{\star}}$}]  Wegpunktdatei in der spezielle Wegpunkte gespeichert werden,
-für die erweiterte Berechnung wie Ankunftshöhe etc.\  in der Karte (also auf dem Bildschirm)
-angezeigt werden. Die bekommen dann die bekannten grünen Rahmen.
-Sinnvoll für z.B.\ bekannte und zuverlässige Thermikauslösepunkte, Bergrücken, Kraftwerke etc.\
-\item[\textit{Lufträume}]  Primäres Luftraumdatei. Wenn nichts angewählt wird, werden die Daten aus der
-Kartendatenbank (\verb''*.xcm'') benzutzt (sofern vorhanden).
+
+\item[\textit{Wegpunkte}] Das primäre Wegpunkt-File. 
+\item[\textit{Weitere Wegpunkte$^{\textcolor{blue}{\star}}$}]  Eine zweite Wegpunktdatei. Hier können z.B. Wegpunkte und spezielle Angaben für Wettbewerbe oder ähnliches hinterlegt werden.
+\item[\textit{Beobachtete Wegpunkte$^{\textcolor{blue}{\star}}$}] Eine dritte Wegpunktdatei. Sinnvoll für z.B.\ bekannte und zuverlässige Thermikauslösepunkte, Bergrücken, Kraftwerke etc.\
+
+Grundsätzlich gilt: Wenn in keinem der drei Slots ein file ausgewählt ist, werden die Wegpunktdaten aus der Kartendatenbank (\verb"*.xcm"), s.o.\ benutzt (sofern dort vorhanden).
+
+
+\item[\textit{Lufträume}]  Primäre Luftraumdatei. 
 \item[\textit{Weitere Lufträume$^{\textcolor{blue}{\star}}$}]  Sekundäre Luftraumdatei. Hier  können z.B.\ Lufträume wie
-Wettbewerbsgebiete oder andere eigene bearbeitete Luftraumdaten  eingegeben werden.
-\item[\textit{Wegpunktdetails$^{\textcolor{blue}{\star}}$}]  Hier kann eine Datei angegeben werden, in der vor allem
- zu  Flugplätzen eingegeben werden können.
+Wettbewerbsgebiete oder andere eigene bearbeitete Luftraumdaten eingegeben werden.
+
+Wenn in keinem der beiden Slots ein file ausgewählt wird, werden die Daten aus der Kartendatenbank (\verb"*.xcm"), s.o.\ benutzt (sofern dort vorhanden).
+
+\item[\textit{Wegpunktdetails$^{\textcolor{blue}{\star}}$}]  Hier kann eine Datei angegeben werden, in der ergänzende Details zu Wegpunkten, Landewiesen oder Flugplätzen enthalten sind. In dieser Datei können auch Bilder und andere Medienfiles eingebunden werden. Weitere Informationen zur Einrichtung sind im Kap.~\ref{sec:airfield-details} beschrieben.
 \end{description}
 
 Luftraum-Dateien definieren besondere Lufträume, die der Benutzer separat hinzufügen
@@ -125,13 +125,12 @@ sofern sie den Konventionen bzw. dem erforderlichen Format entsprechen.
 
 
 Die XCM Datenbank ist derzeit der gängige Weg,
-Karten wie Toplologie, Gelände und Topgraphie einzugeben. Vor der Version 6.4 von \xc waren  hierzu noch
-andere Files anzugeben, die explizit die Toplologie bzw. das Gelände enthielten.
+Karten wie Topologie, Gelände und Topographie einzugeben. Vor der Version 6.4 von \xc waren  hierzu noch
+andere Files anzugeben, die explizit die Topologie bzw. das Gelände enthielten.
 Die Möglichkeit, dies einzeln anzuwählen wurde mit Einführung der Version 6.4 fallen gelassen.
 
 Das XCM-File beinhaltet derzeit all diese Files: Gelände, Topologie, Wegpunkte und Lufträume.
-Wenn diese Files im XCM File vorhanden sind, dann muß kein primäres Wegpunktdatei
-angewählt werden und \xc nimmt die Wegpunkte aus der XCM-Datenbank.
+Wenn diese Files im XCM File vorhanden sind, dann muß keine separate Wegpunktdatei angewählt werden und \xc nimmt die Wegpunkte aus der XCM-Datenbank.
 
 Es steht Euch frei, beliebige Dateien zu erstellen und einzufügen, welche dann anschließend
 anstelle der Kartenbankdatei benutzt werden soll. Mehr zu den Kartendateien in Kap.~\ref{sec:map}.
